@@ -53,6 +53,12 @@ variable "db_host" {
   type        = string
 }
 
+variable "db_port" {
+  description = "Porta do PostgreSQL (output port do modulo rds)"
+  type        = number
+  default     = 5432
+}
+
 variable "db_name" {
   description = "Nome do banco"
   type        = string
