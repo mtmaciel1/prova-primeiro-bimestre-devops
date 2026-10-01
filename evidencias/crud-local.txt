@@ -1,0 +1,42 @@
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 78
+ETag: W/"4e-k/bS/rlhLZbrP/qDLGSamdO4/0Y"
+Date: Thu, 01 Oct 2026 18:40:21 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":1,"cliente":"Ana","data":"2026-10-10T00:00:00.000Z","status":"pendente"}HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 80
+ETag: W/"50-jsUs3tO5jqWJArcyNiKQLc1ILhs"
+Date: Thu, 01 Oct 2026 18:40:32 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[{"id":1,"cliente":"Ana","data":"2026-10-10T00:00:00.000Z","status":"pendente"}]HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 78
+ETag: W/"4e-k/bS/rlhLZbrP/qDLGSamdO4/0Y"
+Date: Thu, 01 Oct 2026 18:40:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":1,"cliente":"Ana","data":"2026-10-10T00:00:00.000Z","status":"pendente"}HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 86
+ETag: W/"56-xeT2pY9taTlzQaIrSYbgMPLsNGE"
+Date: Thu, 01 Oct 2026 18:40:47 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":1,"cliente":"Ana Maria","data":"2026-10-10T00:00:00.000Z","status":"confirmada"}HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Thu, 01 Oct 2026 18:40:57 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
