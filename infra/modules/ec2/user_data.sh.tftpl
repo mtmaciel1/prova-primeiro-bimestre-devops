@@ -1,0 +1,52 @@
+#!/bin/bash
+set -euo pipefail
+exec > >(tee -a /var/log/reservas-setup.log) 2>&1
+
+echo "[setup] Instalando Git e Node.js 20"
+dnf install -y git
+curl -fsSL https://rpm.nodesource.com/setup_20.x | bash -
+dnf install -y nodejs
+
+echo "[setup] Baixando a API do GitHub"
+APP_DIR=/opt/api-reservas
+git clone --depth 1 --branch ${repo_branch} ${repo_url} /tmp/repo
+mkdir -p "$APP_DIR"
+cp -r /tmp/repo/app/. "$APP_DIR"/
+cd "$APP_DIR"
+npm ci --omit=dev
+chown -R ec2-user:ec2-user "$APP_DIR"
+
+echo "[setup] Gravando variaveis de ambiente"
+cat > /etc/api-reservas.env <<'EOF'
+PORT=${api_port}
+DB_HOST=${db_host}
+DB_PORT=${db_port}
+DB_NAME=${db_name}
+DB_USER=${db_user}
+DB_PASSWORD=${db_password}
+EOF
+chmod 600 /etc/api-reservas.env
+
+echo "[setup] Criando servico systemd"
+cat > /etc/systemd/system/api-reservas.service <<'EOF'
+[Unit]
+Description=API de Reservas - TechNova
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/opt/api-reservas
+EnvironmentFile=/etc/api-reservas.env
+ExecStart=/usr/bin/node /opt/api-reservas/src/index.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable --now api-reservas
+echo "[setup] Concluido"
