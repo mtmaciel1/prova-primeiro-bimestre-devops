@@ -1,0 +1,17 @@
+[
+    {
+        "IpProtocol": "tcp",
+        "FromPort": 5432,
+        "ToPort": 5432,
+        "UserIdGroupPairs": [
+            {
+                "Description": "PostgreSQL somente do SG da EC2",
+                "UserId": "029269295541",
+                "GroupId": "sg-0c26ca3d978343240"
+            }
+        ],
+        "IpRanges": [],
+        "Ipv6Ranges": [],
+        "PrefixListIds": []
+    }
+]
