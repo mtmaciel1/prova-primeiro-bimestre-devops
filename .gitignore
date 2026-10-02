@@ -4,3 +4,5 @@ node_modules/
 *.tfstate
 *.tfstate.*
 *.pem
+*.tfvars
+tfplan
