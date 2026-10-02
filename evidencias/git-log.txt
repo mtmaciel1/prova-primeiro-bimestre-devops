@@ -1,5 +1,8 @@
-*   27b3acd merge: infraestrutura aws com terraform modularizado
+*   7a478d4 merge: evidencias finais da infraestrutura
 |\  
+| * 74dc79f docs: adiciona evidencias do deploy na aws, seguranca do rds e destroy
+* | 27b3acd merge: infraestrutura aws com terraform modularizado
+|\| 
 | * 08b509a fix: habilita ssl na conexao com o rds e adiciona backend remoto
 | * 3510ef7 fix: corrige blocos hcl no variables da ec2 e tipagem do db_port
 |/  
