@@ -1,0 +1,722 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile" instead.
+Acquiring state lock. This may take a few moments...
+module.ec2.data.aws_ami.al2023: Reading...
+module.vpc.aws_vpc.this: Refreshing state... [id=vpc-07d6be46fb386e18e]
+module.ec2.data.aws_ami.al2023: Read complete after 2s [id=ami-03c3da4cfa8e8943a]
+module.vpc.aws_internet_gateway.this: Refreshing state... [id=igw-0f519f6c8fecd8a3b]
+module.vpc.aws_route_table.private: Refreshing state... [id=rtb-03e555836b75c4c2d]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0d84b3532f8106af6]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0d3741ea311cc03d9]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-023938ae361b5d819]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0212bf47127b6a6af]
+module.security_group.aws_security_group.ec2: Refreshing state... [id=sg-0c26ca3d978343240]
+module.vpc.aws_route_table.public: Refreshing state... [id=rtb-0072513e316822eff]
+module.security_group.aws_security_group.rds: Refreshing state... [id=sg-0cfa9fc50c72a9380]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0b7ce5ca12b5aa9e1]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0a73eaa143af7ed9f]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0812ebb597f14bcb7]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0cf347ba8aec7cb70]
+module.rds.aws_db_subnet_group.this: Refreshing state... [id=technova-reservas-db-subnet-group]
+module.rds.aws_db_instance.this: Refreshing state... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ]
+module.ec2.aws_instance.api: Refreshing state... [id=i-00a1ff222b9284f73]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.ec2.aws_instance.api will be destroyed
+  - resource "aws_instance" "api" {
+      - ami                                  = "ami-03c3da4cfa8e8943a" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:029269295541:instance/i-00a1ff222b9284f73" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - iam_instance_profile                 = "LabInstanceProfile" -> null
+      - id                                   = "i-00a1ff222b9284f73" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "vockey" -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-04ed0b508364599bb" -> null
+      - private_dns                          = "ip-10-0-1-86.ec2.internal" -> null
+      - private_ip                           = "10.0.1.86" -> null
+      - public_dns                           = "ec2-44-199-191-161.compute-1.amazonaws.com" -> null
+      - public_ip                            = "44.199.191.161" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0d84b3532f8106af6" -> null
+      - tags                                 = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-api"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all                             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-api"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data                            = (sensitive value) -> null
+      - user_data_replace_on_change          = true -> null
+      - vpc_security_group_ids               = [
+          - "sg-0c26ca3d978343240",
+        ] -> null
+        # (6 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:us-east-1:029269295541:key/1985aa34-d6af-4669-85fb-308de72b6dbc" -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-03dcb37f373b5f4be" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # module.rds.aws_db_instance.this will be destroyed
+  - resource "aws_db_instance" "this" {
+      - address                               = "technova-reservas-db.cjsqnqpqhs9x.us-east-1.rds.amazonaws.com" -> null
+      - allocated_storage                     = 20 -> null
+      - apply_immediately                     = true -> null
+      - arn                                   = "arn:aws:rds:us-east-1:029269295541:db:technova-reservas-db" -> null
+      - auto_minor_version_upgrade            = true -> null
+      - availability_zone                     = "us-east-1b" -> null
+      - backup_retention_period               = 0 -> null
+      - backup_target                         = "region" -> null
+      - backup_window                         = "07:43-08:13" -> null
+      - ca_cert_identifier                    = "rds-ca-rsa2048-g1" -> null
+      - copy_tags_to_snapshot                 = false -> null
+      - customer_owned_ip_enabled             = false -> null
+      - database_insights_mode                = "standard" -> null
+      - db_name                               = "reservas_db" -> null
+      - db_subnet_group_name                  = "technova-reservas-db-subnet-group" -> null
+      - dedicated_log_volume                  = false -> null
+      - delete_automated_backups              = true -> null
+      - deletion_protection                   = false -> null
+      - domain_dns_ips                        = [] -> null
+      - enabled_cloudwatch_logs_exports       = [] -> null
+      - endpoint                              = "technova-reservas-db.cjsqnqpqhs9x.us-east-1.rds.amazonaws.com:5432" -> null
+      - engine                                = "postgres" -> null
+      - engine_lifecycle_support              = "open-source-rds-extended-support" -> null
+      - engine_version                        = "15" -> null
+      - engine_version_actual                 = "15.17" -> null
+      - hosted_zone_id                        = "Z2R2ITUGPM61AM" -> null
+      - iam_database_authentication_enabled   = false -> null
+      - id                                    = "db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ" -> null
+      - identifier                            = "technova-reservas-db" -> null
+      - instance_class                        = "db.t3.micro" -> null
+      - iops                                  = 0 -> null
+      - kms_key_id                            = "arn:aws:kms:us-east-1:029269295541:key/30a30981-80da-49c2-a1a4-fd2f565bf979" -> null
+      - license_model                         = "postgresql-license" -> null
+      - listener_endpoint                     = [] -> null
+      - maintenance_window                    = "sun:06:06-sun:06:36" -> null
+      - master_user_secret                    = [] -> null
+      - max_allocated_storage                 = 0 -> null
+      - monitoring_interval                   = 0 -> null
+      - multi_az                              = false -> null
+      - network_type                          = "IPV4" -> null
+      - option_group_name                     = "default:postgres-15" -> null
+      - parameter_group_name                  = "default.postgres15" -> null
+      - password                              = (sensitive value) -> null
+      - password_wo                           = (write-only attribute) -> null
+      - performance_insights_enabled          = false -> null
+      - performance_insights_retention_period = 0 -> null
+      - port                                  = 5432 -> null
+      - publicly_accessible                   = false -> null
+      - replicas                              = [] -> null
+      - resource_id                           = "db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ" -> null
+      - skip_final_snapshot                   = true -> null
+      - status                                = "available" -> null
+      - storage_encrypted                     = true -> null
+      - storage_throughput                    = 0 -> null
+      - storage_type                          = "gp2" -> null
+      - tags                                  = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-db"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all                              = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-db"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - username                              = "reservas_admin" -> null
+      - vpc_security_group_ids                = [
+          - "sg-0cfa9fc50c72a9380",
+        ] -> null
+        # (15 unchanged attributes hidden)
+    }
+
+  # module.rds.aws_db_subnet_group.this will be destroyed
+  - resource "aws_db_subnet_group" "this" {
+      - arn                     = "arn:aws:rds:us-east-1:029269295541:subgrp:technova-reservas-db-subnet-group" -> null
+      - description             = "Managed by Terraform" -> null
+      - id                      = "technova-reservas-db-subnet-group" -> null
+      - name                    = "technova-reservas-db-subnet-group" -> null
+      - subnet_ids              = [
+          - "subnet-0212bf47127b6a6af",
+          - "subnet-0d3741ea311cc03d9",
+        ] -> null
+      - supported_network_types = [
+          - "IPV4",
+        ] -> null
+      - tags                    = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-db-subnet-group"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all                = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-db-subnet-group"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - vpc_id                  = "vpc-07d6be46fb386e18e" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.security_group.aws_security_group.ec2 will be destroyed
+  - resource "aws_security_group" "ec2" {
+      - arn                    = "arn:aws:ec2:us-east-1:029269295541:security-group/sg-0c26ca3d978343240" -> null
+      - description            = "Permite SSH (22) e API (3000) a partir da internet" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Todo trafego de saida"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0c26ca3d978343240" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "API Node.js"
+              - from_port        = 3000
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 3000
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "SSH"
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+        ] -> null
+      - name                   = "technova-reservas-ec2-sg" -> null
+      - owner_id               = "029269295541" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-ec2-sg"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all               = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-ec2-sg"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - vpc_id                 = "vpc-07d6be46fb386e18e" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.security_group.aws_security_group.rds will be destroyed
+  - resource "aws_security_group" "rds" {
+      - arn                    = "arn:aws:ec2:us-east-1:029269295541:security-group/sg-0cfa9fc50c72a9380" -> null
+      - description            = "Permite PostgreSQL (5432) apenas a partir do SG da EC2" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Todo trafego de saida"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0cfa9fc50c72a9380" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = []
+              - description      = "PostgreSQL somente do SG da EC2"
+              - from_port        = 5432
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0c26ca3d978343240",
+                ]
+              - self             = false
+              - to_port          = 5432
+            },
+        ] -> null
+      - name                   = "technova-reservas-rds-sg" -> null
+      - owner_id               = "029269295541" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-rds-sg"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all               = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-rds-sg"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - vpc_id                 = "vpc-07d6be46fb386e18e" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_internet_gateway.this will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:us-east-1:029269295541:internet-gateway/igw-0f519f6c8fecd8a3b" -> null
+      - id       = "igw-0f519f6c8fecd8a3b" -> null
+      - owner_id = "029269295541" -> null
+      - tags     = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-igw"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-igw"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - vpc_id   = "vpc-07d6be46fb386e18e" -> null
+    }
+
+  # module.vpc.aws_route_table.private will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-east-1:029269295541:route-table/rtb-03e555836b75c4c2d" -> null
+      - id               = "rtb-03e555836b75c4c2d" -> null
+      - owner_id         = "029269295541" -> null
+      - propagating_vgws = [] -> null
+      - route            = [] -> null
+      - tags             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-private-rt"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all         = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-private-rt"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - vpc_id           = "vpc-07d6be46fb386e18e" -> null
+    }
+
+  # module.vpc.aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:029269295541:route-table/rtb-0072513e316822eff" -> null
+      - id               = "rtb-0072513e316822eff" -> null
+      - owner_id         = "029269295541" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0f519f6c8fecd8a3b"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-public-rt"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all         = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-public-rt"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - vpc_id           = "vpc-07d6be46fb386e18e" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[0] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-0812ebb597f14bcb7" -> null
+      - route_table_id = "rtb-03e555836b75c4c2d" -> null
+      - subnet_id      = "subnet-0d3741ea311cc03d9" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.private[1] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-0cf347ba8aec7cb70" -> null
+      - route_table_id = "rtb-03e555836b75c4c2d" -> null
+      - subnet_id      = "subnet-0212bf47127b6a6af" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.public[0] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0a73eaa143af7ed9f" -> null
+      - route_table_id = "rtb-0072513e316822eff" -> null
+      - subnet_id      = "subnet-0d84b3532f8106af6" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.public[1] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0b7ce5ca12b5aa9e1" -> null
+      - route_table_id = "rtb-0072513e316822eff" -> null
+      - subnet_id      = "subnet-023938ae361b5d819" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_subnet.private[0] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:029269295541:subnet/subnet-0d3741ea311cc03d9" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0d3741ea311cc03d9" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "029269295541" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-private-us-east-1a"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "private"
+        } -> null
+      - tags_all                                       = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-private-us-east-1a"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "private"
+        } -> null
+      - vpc_id                                         = "vpc-07d6be46fb386e18e" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.private[1] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:029269295541:subnet/subnet-0212bf47127b6a6af" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1b" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.0.4.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0212bf47127b6a6af" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "029269295541" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-private-us-east-1b"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "private"
+        } -> null
+      - tags_all                                       = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-private-us-east-1b"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "private"
+        } -> null
+      - vpc_id                                         = "vpc-07d6be46fb386e18e" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:029269295541:subnet/subnet-0d84b3532f8106af6" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0d84b3532f8106af6" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "029269295541" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-public-us-east-1a"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "public"
+        } -> null
+      - tags_all                                       = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-public-us-east-1a"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "public"
+        } -> null
+      - vpc_id                                         = "vpc-07d6be46fb386e18e" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:029269295541:subnet/subnet-023938ae361b5d819" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1b" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.0.3.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-023938ae361b5d819" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "029269295541" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-public-us-east-1b"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "public"
+        } -> null
+      - tags_all                                       = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-public-us-east-1b"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+          - "Tier"      = "public"
+        } -> null
+      - vpc_id                                         = "vpc-07d6be46fb386e18e" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_vpc.this will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-1:029269295541:vpc/vpc-07d6be46fb386e18e" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.0.0.0/16" -> null
+      - default_network_acl_id               = "acl-0e68a70bfd30bc4dd" -> null
+      - default_route_table_id               = "rtb-0728f1f93454fb2ff" -> null
+      - default_security_group_id            = "sg-02169eae3d718e81c" -> null
+      - dhcp_options_id                      = "dopt-0f22fa87bda33759b" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-07d6be46fb386e18e" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0728f1f93454fb2ff" -> null
+      - owner_id                             = "029269295541" -> null
+      - tags                                 = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-vpc"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+      - tags_all                             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "technova-reservas-vpc"
+          - "Owner"     = "Matheus Maciel de Paula"
+          - "Project"   = "technova-reservas"
+          - "RA"        = "6325065"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 17 to destroy.
+
+Changes to Outputs:
+  - api_url       = "http://44.199.191.161:3000" -> null
+  - ec2_public_ip = "44.199.191.161" -> null
+  - rds_endpoint  = "technova-reservas-db.cjsqnqpqhs9x.us-east-1.rds.amazonaws.com:5432" -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: 
+module.vpc.aws_route_table_association.public[0]: Destroying... [id=rtbassoc-0a73eaa143af7ed9f]
+module.vpc.aws_route_table_association.public[1]: Destroying... [id=rtbassoc-0b7ce5ca12b5aa9e1]
+module.vpc.aws_route_table_association.private[0]: Destroying... [id=rtbassoc-0812ebb597f14bcb7]
+module.vpc.aws_route_table_association.private[1]: Destroying... [id=rtbassoc-0cf347ba8aec7cb70]
+module.ec2.aws_instance.api: Destroying... [id=i-00a1ff222b9284f73]
+module.vpc.aws_route_table_association.public[0]: Destruction complete after 1s
+module.vpc.aws_route_table_association.private[1]: Destruction complete after 1s
+module.vpc.aws_route_table_association.private[0]: Destruction complete after 1s
+module.vpc.aws_route_table.private: Destroying... [id=rtb-03e555836b75c4c2d]
+module.vpc.aws_route_table_association.public[1]: Destruction complete after 1s
+module.vpc.aws_route_table.public: Destroying... [id=rtb-0072513e316822eff]
+module.vpc.aws_route_table.public: Destruction complete after 1s
+module.vpc.aws_internet_gateway.this: Destroying... [id=igw-0f519f6c8fecd8a3b]
+module.vpc.aws_route_table.private: Destruction complete after 1s
+module.ec2.aws_instance.api: Still destroying... [id=i-00a1ff222b9284f73, 00m10s elapsed]
+module.vpc.aws_internet_gateway.this: Still destroying... [id=igw-0f519f6c8fecd8a3b, 00m10s elapsed]
+module.ec2.aws_instance.api: Still destroying... [id=i-00a1ff222b9284f73, 00m20s elapsed]
+module.vpc.aws_internet_gateway.this: Destruction complete after 19s
+module.ec2.aws_instance.api: Destruction complete after 22s
+module.vpc.aws_subnet.public[1]: Destroying... [id=subnet-023938ae361b5d819]
+module.vpc.aws_subnet.public[0]: Destroying... [id=subnet-0d84b3532f8106af6]
+module.rds.aws_db_instance.this: Destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ]
+module.vpc.aws_subnet.public[1]: Destruction complete after 1s
+module.vpc.aws_subnet.public[0]: Destruction complete after 1s
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 00m10s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 00m20s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 00m30s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 00m40s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 00m50s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 01m00s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 01m10s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 01m20s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 01m30s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 01m40s elapsed]
+module.rds.aws_db_instance.this: Still destroying... [id=db-LXJ6SRZPMKOPIWK6MWSZTGV4LQ, 01m50s elapsed]
+module.rds.aws_db_instance.this: Destruction complete after 1m53s
+module.rds.aws_db_subnet_group.this: Destroying... [id=technova-reservas-db-subnet-group]
+module.security_group.aws_security_group.rds: Destroying... [id=sg-0cfa9fc50c72a9380]
+module.rds.aws_db_subnet_group.this: Destruction complete after 0s
+module.vpc.aws_subnet.private[1]: Destroying... [id=subnet-0212bf47127b6a6af]
+module.vpc.aws_subnet.private[0]: Destroying... [id=subnet-0d3741ea311cc03d9]
+module.vpc.aws_subnet.private[1]: Destruction complete after 1s
+module.security_group.aws_security_group.rds: Destruction complete after 2s
+module.security_group.aws_security_group.ec2: Destroying... [id=sg-0c26ca3d978343240]
+module.vpc.aws_subnet.private[0]: Destruction complete after 2s
+module.security_group.aws_security_group.ec2: Destruction complete after 1s
+module.vpc.aws_vpc.this: Destroying... [id=vpc-07d6be46fb386e18e]
+module.vpc.aws_vpc.this: Destruction complete after 1s
+
+Destroy complete! Resources: 17 destroyed.

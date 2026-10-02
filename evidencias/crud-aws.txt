@@ -1,0 +1,67 @@
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 78
+ETag: W/"4e-k/bS/rlhLZbrP/qDLGSamdO4/0Y"
+Date: Fri, 02 Oct 2026 00:18:53 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":1,"cliente":"Ana","data":"2026-10-10T00:00:00.000Z","status":"pendente"}
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 80
+ETag: W/"50-jsUs3tO5jqWJArcyNiKQLc1ILhs"
+Date: Fri, 02 Oct 2026 00:18:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[{"id":1,"cliente":"Ana","data":"2026-10-10T00:00:00.000Z","status":"pendente"}]
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 78
+ETag: W/"4e-k/bS/rlhLZbrP/qDLGSamdO4/0Y"
+Date: Fri, 02 Oct 2026 00:18:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":1,"cliente":"Ana","data":"2026-10-10T00:00:00.000Z","status":"pendente"}
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 86
+ETag: W/"56-xeT2pY9taTlzQaIrSYbgMPLsNGE"
+Date: Fri, 02 Oct 2026 00:18:55 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":1,"cliente":"Ana Maria","data":"2026-10-10T00:00:00.000Z","status":"confirmada"}
+HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 80
+ETag: W/"50-jC5V0BgHusgI2goyF29Y+l9IDf8"
+Date: Fri, 02 Oct 2026 00:18:55 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"erro":"Status inválido. Valores aceitos: pendente, confirmada ou cancelada."}
+HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 35
+ETag: W/"23-PwkKLwL/ThvQIGcWgzYplKxu3AA"
+Date: Fri, 02 Oct 2026 00:18:56 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"erro":"Reserva não encontrada."}
+HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Fri, 02 Oct 2026 00:18:56 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+

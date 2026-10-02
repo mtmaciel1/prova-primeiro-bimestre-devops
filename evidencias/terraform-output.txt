@@ -1,0 +1,7 @@
+api_url = "http://44.199.191.161:3000"
+ec2_public_ip = "44.199.191.161"
+rds_endpoint = "technova-reservas-db.cjsqnqpqhs9x.us-east-1.rds.amazonaws.com:5432"
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile" instead.

@@ -1,0 +1,9 @@
+--------------------------------------------------------
+|                  DescribeDBInstances                 |
++----------------+-------------------------------------+
+|  Classe        |  db.t3.micro                        |
+|  Criptografado |  True                               |
+|  Engine        |  15.17                              |
+|  Publico       |  False                              |
+|  SubnetGroup   |  technova-reservas-db-subnet-group  |
++----------------+-------------------------------------+

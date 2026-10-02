@@ -1,0 +1,18 @@
+*   27b3acd merge: infraestrutura aws com terraform modularizado
+|\  
+| * 08b509a fix: habilita ssl na conexao com o rds e adiciona backend remoto
+| * 3510ef7 fix: corrige blocos hcl no variables da ec2 e tipagem do db_port
+|/  
+* f3721d1 feat: cria modulo rds
+* ef92c50 feat: cria modulo ec2
+* d290bf5 feat: cria modulo security group
+* 7f9416c feat: cria modulo vpc
+* 553033f docs: adiciona evidencias do compose e testes do crud
+* 998d5ba feat: adiciona docker compose com api e postgresql e evidencia de testes locais
+* 103ef0e fix: ajusta CMD para rodar node direto e tratar sinais de parada
+* 8dc522b feat: cria dockerfile multi-stage com usuario nao-root
+* d5fe17e feat: cria api node com express e integracao postgresql
+* 280843b docs: cria readme do projeto
+* 67d82af chore: adiciona arquivo .gitignore com regras de exclusao
+* c706201 docs: adiciona requisitos de criptografia, outputs e readme
+* e3b481c docs: adiciona primeiros requisitos da API de reservas
